@@ -10,15 +10,17 @@ import UIKit
 import Lottie
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var loadingBar: UIImageView!
+    
+    //Function that transitions to the second screen
+    func transitionToSecondScreen() {
+        performSegue(withIdentifier: "mainTransition",  sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+
         //Loading animation
-        loadingBar.center = view.center
         let animationView = LOTAnimationView(name: "bouncy_loader")
         animationView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
         animationView.center = self.view.center
@@ -28,16 +30,10 @@ class ViewController: UIViewController {
         animationView.loopAnimation = true
         animationView.play()
         
-        //Second view after
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "welcomeScreen") as UIViewController
-        navigationController?.pushViewController(vc, animated: true)
-        
-        // Safe Push VC
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcomeScreen") as? welcomScreen {
-            if let navigator = navigationController {
-                navigator.pushViewController(viewController, animated: true)
-            }
+        //Stop animation after 4 seconds and display second screen
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            animationView.isHidden = true
+            self.transitionToSecondScreen()
         }
     }
     

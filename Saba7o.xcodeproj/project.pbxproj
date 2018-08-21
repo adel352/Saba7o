@@ -15,9 +15,9 @@
 		9711F6A420CB6F6A00E5F5BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9711F6A220CB6F6A00E5F5BE /* LaunchScreen.storyboard */; };
 		9711F6AF20CB6F6A00E5F5BE /* Saba7oTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711F6AE20CB6F6A00E5F5BE /* Saba7oTests.swift */; };
 		9711F6BA20CB6F6A00E5F5BE /* Saba7oUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711F6B920CB6F6A00E5F5BE /* Saba7oUITests.swift */; };
+		977C44DD212CBA3800E5B311 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977C44DC212CBA3800E5B311 /* SecondViewController.swift */; };
 		97E5D044212C5E8400C7296F /* servishero_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 97E5D043212C5E8400C7296F /* servishero_loading.json */; };
 		97E5D046212C66FB00C7296F /* bouncy_loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 97E5D045212C66FB00C7296F /* bouncy_loader.json */; };
-		97E5D048212C679500C7296F /* welcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D047212C679500C7296F /* welcomeScreen.swift */; };
 		A7DDD3462F41F14B1F3DA9D0 /* Pods_Saba7o.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B15A24FC98E14ECFC5B9E3F /* Pods_Saba7o.framework */; };
 		BEFCA20C1F282EBBB450F629 /* Pods_Saba7oUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44D575E73D11D000DD0BF33 /* Pods_Saba7oUITests.framework */; };
 /* End PBXBuildFile section */
@@ -59,9 +59,9 @@
 		9711F6B520CB6F6A00E5F5BE /* Saba7oUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Saba7oUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9711F6B920CB6F6A00E5F5BE /* Saba7oUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saba7oUITests.swift; sourceTree = "<group>"; };
 		9711F6BB20CB6F6A00E5F5BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		977C44DC212CBA3800E5B311 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		97E5D043212C5E8400C7296F /* servishero_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = servishero_loading.json; path = ../../../Downloads/servishero_loading.json; sourceTree = "<group>"; };
 		97E5D045212C66FB00C7296F /* bouncy_loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bouncy_loader.json; path = ../../../Downloads/bouncy_loader.json; sourceTree = "<group>"; };
-		97E5D047212C679500C7296F /* welcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeScreen.swift; sourceTree = "<group>"; };
 		A44D575E73D11D000DD0BF33 /* Pods_Saba7oUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saba7oUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29BCD71CF18A50757A2B9B6 /* Pods-Saba7oUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saba7oUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Saba7oUITests/Pods-Saba7oUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF65653F4410C9049DECFF6F /* Pods-Saba7oUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saba7oUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Saba7oUITests/Pods-Saba7oUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 				97E5D043212C5E8400C7296F /* servishero_loading.json */,
 				9711F69920CB6F6800E5F5BE /* AppDelegate.swift */,
 				9711F69B20CB6F6800E5F5BE /* ViewController.swift */,
-				97E5D047212C679500C7296F /* welcomeScreen.swift */,
+				977C44DC212CBA3800E5B311 /* SecondViewController.swift */,
 				9711F69D20CB6F6800E5F5BE /* Main.storyboard */,
 				9711F6A020CB6F6A00E5F5BE /* Assets.xcassets */,
 				9711F6A220CB6F6A00E5F5BE /* LaunchScreen.storyboard */,
@@ -312,15 +312,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Saba7o/Pods-Saba7o-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
@@ -334,15 +330,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Saba7o-checkManifestLockResult.txt",
 			);
@@ -356,15 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Saba7oTests-checkManifestLockResult.txt",
 			);
@@ -378,15 +366,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Saba7oUITests-checkManifestLockResult.txt",
 			);
@@ -402,9 +386,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				977C44DD212CBA3800E5B311 /* SecondViewController.swift in Sources */,
 				9711F69C20CB6F6800E5F5BE /* ViewController.swift in Sources */,
 				9711F69A20CB6F6800E5F5BE /* AppDelegate.swift in Sources */,
-				97E5D048212C679500C7296F /* welcomeScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,13 +565,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7PKG45HR7B;
 				INFOPLIST_FILE = Saba7o/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AdelAraji.Saba7o;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -600,13 +585,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7PKG45HR7B;
 				INFOPLIST_FILE = Saba7o/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AdelAraji.Saba7o;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
